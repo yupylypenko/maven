@@ -14,7 +14,7 @@ public class MysqlServlet extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
  
         PrintWriter pw = resp.getWriter();
-        pw.println("<H1>Hello, world! или Привет мир! Это mysql 1  !</H1>");        
+        pw.println("<H1>Hello, world! или Привет мир! Это mysql!</H1>");        
  
     }
 }
