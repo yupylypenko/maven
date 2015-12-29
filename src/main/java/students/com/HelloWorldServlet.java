@@ -15,7 +15,7 @@ public class HelloWorldServlet extends HttpServlet {
  
         PrintWriter pw = resp.getWriter();
         pw.println("<H1>Hello, world! или Привет мир! Это я!</H1>");
-        pw.println("<H1>Следующая моя стpаница!</H1>");
+        pw.println("<H1>Следующая моя стpаница 1!</H1>");
  
     }
 }
