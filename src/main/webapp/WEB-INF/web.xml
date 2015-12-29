@@ -14,5 +14,14 @@
         <servlet-name>HelloWorld</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
- 
+   <servlet>
+        <servlet-name>Mysql</servlet-name>
+        <servlet-class>
+		ingo.mysql.MysqlServlet	
+	</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Mysql</servlet-name>
+        <url-pattern>/mysql</url-pattern>
+    </servlet-mapping> 
 </web-app>
