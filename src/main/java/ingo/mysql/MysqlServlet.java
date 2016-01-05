@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 public class MysqlServlet extends HttpServlet {
  
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//    	String username = (String) req.getParameter("username");
-//    	username = username.toUpperCase();
+    	String username = (String) req.getParameter("username");
+    	username = username.toUpperCase();
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
                       
