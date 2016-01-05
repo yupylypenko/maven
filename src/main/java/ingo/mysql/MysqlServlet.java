@@ -22,15 +22,15 @@ public class MysqlServlet extends HttpServlet {
         pw.println("<html><body>");
                 
     	pw.print("<form method=\"POST\">");
-    	pw.println("<p> Введите имя пользователя: <input type=\"text\" name=\"username\"/></p>");
+    	pw.println("<p> Введите имя пользователя: <input type=\"text\" name=\"param\"/></p>");
     	pw.println("<input type=\"submit\" value=\"Отправить!\"/></form>");
     	       
         pw.println("</body></html>");
  
     }
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    	String username = (String) req.getParameter("username");
-    	username = username.toUpperCase();
+    	String param = (String) req.getParameter("param");
+    	param = param.toUpperCase();
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
                       
@@ -39,7 +39,7 @@ public class MysqlServlet extends HttpServlet {
         pw.println("<H1>Следующая моя стpаница POST!</H1>"); 
         pw.println("<html><body>");
         
-    	pw.println("<p>"+username+"</p>");
+    	pw.println("<p>"+param+"</p>");
     	    	       
         pw.println("</body></html>");
  
