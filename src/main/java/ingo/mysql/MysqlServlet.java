@@ -17,8 +17,13 @@ public class MysqlServlet extends HttpServlet {
  
         PrintWriter pw = resp.getWriter();
         pw.println("<H1>Hello, world! или Привет мир! Это я!</H1>");
-        pw.println("<H1>Следующая моя стpаница!</H1>");               
-        pw.println("<html><body><p> Yurec </p></body></html>");
+        pw.println("<H1>Следующая моя стpаница!</H1>"); 
+        pw.println("<html><body>");
+        pw.println("<p> Yurec </p>");
+        pw.print("<form method=\"post\">");
+        pw.println("<input type=\"text\" name=\"param1\"/>");
+        pw.println("<input type=\"submit\" value=\"CLICK HERE\"/></form>");
+        pw.println("</body></html>");
  
     }
     public String concat(String s1, String s2) {
