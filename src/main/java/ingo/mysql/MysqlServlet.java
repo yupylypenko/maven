@@ -32,7 +32,7 @@ public class MysqlServlet extends HttpServlet {
     	pw.println("<div>");        
     	pw.print("<form method=\"GET\">");
     	pw.println("<p> Введите имя цифры: <input type=\"text\" name=\"action\"/></p>");
-    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+number2+"></p>");
+    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+number+"></p>");
     	pw.println("<hr />");
     	pw.println("<input name=\"plus\" type=\"submit\" value=\"+\"></input>");
 
