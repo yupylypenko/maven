@@ -26,7 +26,7 @@ public class MysqlServlet extends HttpServlet {
     	pw.println("<input type=\"submit\" value=\"Отправить!\"/></form>");
     	pw.println("</div>");
     	pw.println("<div>");        
-    	pw.print("<form method=\"POST\">");
+    	pw.print("<form method=\"GET\">");
     	pw.println("<p> Введите имя цифры: <input type=\"text\" name=\"action\"/></p>");
     	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value=\"\"></p>");
     	pw.println("<hr />");
