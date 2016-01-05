@@ -17,13 +17,8 @@ public class MysqlServlet extends HttpServlet {
  
         PrintWriter pw = resp.getWriter();
         pw.println("<H1>Hello, world! или Привет мир! Это я!</H1>");
-        pw.println("<H1>Следующая моя стpаница 1!</H1>");
-        
-       
-        String username = (String) req.getParameter("username");
-        username = username.toUpperCase();
-               
-        resp.getWriter().println("<html><body><p> Yurec </p></body></html>");
+        pw.println("<H1>Следующая моя стpаница!</H1>");               
+        pw.println("<html><body><p> Yurec </p></body></html>");
  
     }
     public String concat(String s1, String s2) {
