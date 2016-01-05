@@ -23,7 +23,7 @@ public class MysqlServlet extends HttpServlet {
         String username = (String) req.getParameter("username");
         username = username.toUpperCase();
                
-        resp.getWriter().println("<html><body><p>" + username + "</p></body></html>");
+        resp.getWriter().println("<html><body><p>" Yurec "</p></body></html>");
  
     }
     public String concat(String s1, String s2) {
