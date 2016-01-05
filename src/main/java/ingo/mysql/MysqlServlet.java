@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MysqlServlet extends HttpServlet {
  
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    	String username = (String) req.getParameter("username");
-    	username = username.toUpperCase();
+    	
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
                       
@@ -21,9 +20,8 @@ public class MysqlServlet extends HttpServlet {
         pw.println("<title>Мой первый сервлет!</title>");
         pw.println("<H1>Следующая моя стpаница GET!</H1>"); 
         pw.println("<html><body>");
- //       pw.println("<p>"+username+"</p>");
                 
-    	pw.print("<form method=\"GET\">");
+    	pw.print("<form method=\"POST\">");
     	pw.println("<p> Введите имя пользователя: <input type=\"text\" name=\"username\"/></p>");
     	pw.println("<input type=\"submit\" value=\"Отправить!\"/></form>");
     	       
@@ -31,7 +29,9 @@ public class MysqlServlet extends HttpServlet {
  
     }
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=utf-8");
+    	String username = (String) req.getParameter("username");
+    	username = username.toUpperCase();
+    	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
                       
         PrintWriter pw = resp.getWriter();
@@ -39,7 +39,7 @@ public class MysqlServlet extends HttpServlet {
         pw.println("<H1>Следующая моя стpаница POST!</H1>"); 
         pw.println("<html><body>");
         
-    	pw.println("<p> Введите имя пользователя: </p>");
+    	pw.println("<p>"+username+"</p>");
     	    	       
         pw.println("</body></html>");
  
