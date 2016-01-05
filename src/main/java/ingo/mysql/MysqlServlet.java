@@ -12,10 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 public class MysqlServlet extends HttpServlet {
  
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    	String number = (String) req.getParameter("action");
+    	String number1 = (String) req.getParameter("action1");
+    	String number2 = (String) req.getParameter("action2");
     	String result = "";
-    	String plus = (String) req.getParameter("plus");
-    	Integer number2 = Integer.valueOf(number);
+    	
+    	result = number1+number2;
     	    	
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
@@ -31,8 +32,9 @@ public class MysqlServlet extends HttpServlet {
     	pw.println("</div>");
     	pw.println("<div>");        
     	pw.print("<form method=\"GET\">");
-    	pw.println("<p> Введите имя цифры: <input type=\"text\" name=\"action\"/></p>");
-    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+number+"></p>");
+    	pw.println("<p> Введите первую цифру: <input type=\"text\" name=\"action1\"/></p>");
+    	pw.println("<p> Введите вторую цифру: <input type=\"text\" name=\"action2\"/></p>");
+    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+result+"></p>");
     	pw.println("<hr />");
     	pw.println("<input name=\"plus\" type=\"submit\" value=\"+\"></input>");
 
