@@ -14,10 +14,7 @@ public class MysqlServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
-        
-        String username = (String) req.getParameter("username");
-        username = username.toUpperCase();
-        
+                      
         PrintWriter pw = resp.getWriter();
         pw.println("<H1>Hello, world! или Привет мир! Это я!</H1>");
         pw.println("<H1>Следующая моя стpаница!</H1>"); 
