@@ -15,8 +15,9 @@ public class MysqlServlet extends HttpServlet {
     	String number1 = (String) req.getParameter("action1");
     	String number2 = (String) req.getParameter("action2");
     	String result = "";
-    	
-    	result = number1+number2;
+    	int num1 = Integer.parseInt(number1);
+    	int num2 = Integer.parseInt(number2);
+    	result = 2+2;
     	    	
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
