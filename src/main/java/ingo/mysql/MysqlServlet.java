@@ -13,6 +13,8 @@ public class MysqlServlet extends HttpServlet {
  
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	String number = (String) req.getParameter("action");
+    	String result = "";
+    	String plus = (String) req.getParameter("plus");
     	
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
@@ -29,11 +31,10 @@ public class MysqlServlet extends HttpServlet {
     	pw.println("<div>");        
     	pw.print("<form method=\"GET\">");
     	pw.println("<p> Введите имя цифры: <input type=\"text\" name=\"action\"/></p>");
-    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+number+"></p>");
+    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+result+plus+"></p>");
     	pw.println("<hr />");
     	pw.println("<input name=\"plus\" type=\"submit\" value=\"+\"></input>");
-//    	pw.println("<button name=\"action\" value=\"calculate\"/>Подсчитать</button>");
-//    	pw.println("<button name=\"action\" value=\"clear\"/>Сбросить</button>");
+
     	pw.println("</form>");
     	pw.println("</div>");
         pw.println("</body></html>");
