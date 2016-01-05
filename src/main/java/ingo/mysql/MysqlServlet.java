@@ -13,10 +13,17 @@ public class MysqlServlet extends HttpServlet {
  
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
+        resp.getWriter().println("<!DOCTYPE HTML>");
  
         PrintWriter pw = resp.getWriter();
         pw.println("<H1>Hello, world! или Привет мир! Это я!</H1>");
         pw.println("<H1>Следующая моя стpаница 1!</H1>");
+        
+       
+        String username = (String) req.getParameter("username");
+        username = username.toUpperCase();
+               
+        resp.getWriter().println("<html><body><p>" + username + "</p></body></html>");
  
     }
     public String concat(String s1, String s2) {
