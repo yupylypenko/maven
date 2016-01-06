@@ -15,9 +15,7 @@ public class MysqlServlet extends HttpServlet {
     	String number1 = (String) req.getParameter("action1");
     	String number2 = (String) req.getParameter("action2");
     	String result = "";
-    	int num1 = Integer.parseInt(number1);
-    	int num2 = Integer.parseInt(number2);
-    	int res = num1+num2;
+       	result = number1+number2;
     	    	
     	resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("<!DOCTYPE HTML>");
@@ -35,7 +33,7 @@ public class MysqlServlet extends HttpServlet {
     	pw.print("<form method=\"GET\">");
     	pw.println("<p> Введите первую цифру: <input type=\"text\" name=\"action1\"/></p>");
     	pw.println("<p> Введите вторую цифру: <input type=\"text\" name=\"action2\"/></p>");
-    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+res+"></p>");
+    	pw.println("<p> Результат: <input name=\"result\" type=\"text\" readonly=\"readonly\"/ value="+result+"></p>");
     	pw.println("<hr />");
     	pw.println("<input name=\"plus\" type=\"submit\" value=\"+\"></input>");
 
