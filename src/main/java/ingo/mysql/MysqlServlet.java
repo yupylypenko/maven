@@ -11,7 +11,12 @@ import javax.servlet.http.HttpServletResponse;
  
 public class MysqlServlet extends HttpServlet {
  
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	String number1 = (String) req.getParameter("action1");
     	String number2 = (String) req.getParameter("action2");
     	int result = 0;
