@@ -12,6 +12,6 @@ public class MysqlServletTest {
 	    	MysqlServlet myConcat = new MysqlServlet();
 	        String result = myConcat.concat("Hello", "World");
 	        assertEquals("HelloWorld", result);
-	    }
+	    }	      
 		
 	}
