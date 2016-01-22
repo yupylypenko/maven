@@ -7,6 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>maven Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -20,13 +21,11 @@
       <version>2.5</version>
     </dependency>
   </dependencies>
+
   <build>
 	<finalName>maven-webapp</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
-            </plugin>
+           
         </plugins>
   </build>
 </project>
