@@ -28,7 +28,7 @@ public class MysqlServlet extends HttpServlet {
         resp.getWriter().println("<!DOCTYPE HTML>");
                       
         PrintWriter pw = resp.getWriter();
-        pw.println("<title>Мой первый сервлет !!!</title>");
+        pw.println("<title>Мой первый сервлет!</title>");
         pw.println("<H1>Следующая моя стpаница  GET!</H1>"); 
         pw.println("<html><body>");
         pw.println("<div>");        
@@ -56,7 +56,7 @@ public class MysqlServlet extends HttpServlet {
         resp.getWriter().println("<!DOCTYPE HTML>");
                       
         PrintWriter pw = resp.getWriter();
-        pw.println("<title>Мой первый сервлет!</title>");
+        pw.println("<title>Мой первый сервлет!!!</title>");
         pw.println("<H1>Следующая моя стpаница POST!</H1>"); 
         pw.println("<html><body>");
         
